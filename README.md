@@ -106,5 +106,5 @@ docker build -t your-image/base-redis:main .
 ### Troubleshoot
 
 ```sh
-docker run --rm --name ct_redis --hostname redis -p 6379:6379 your-image/base-portainer:main
+docker run --rm --name ct_redis --hostname redis -p 6379:6379 your-image/base-redis:main
 ```
