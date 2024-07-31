@@ -1,6 +1,6 @@
 # Docker portainer
 
-![GitHub action workflow status](https://github.com/SW-Luis-Palacios/base-redis/actions/workflows/docker-publish.yml/badge.svg)
+![GitHub action workflow status](https://github.com/AgorastisMesaio/docker-img-redis/actions/workflows/docker-publish.yml/badge.svg)
 
 This repository contains a `Dockerfile` aimed to create a *base image* to provide a dockerized Redis service. Redis allows for db caching and handling of configurations of real-time data, making use of its in-memory data storage capabilities to help support highly responsive database constructs. Caching with Redis allows for fewer database accesses, which helps to reduce the amount of traffic and instances required.
 
@@ -47,7 +47,7 @@ networks:
 
 services:
   ct_redis:
-    image: ghcr.io/sw-luis-palacios/base-redis:main
+    image: ghcr.io/agorastismesaio/docker-img-redis:main
     hostname: redis
     container_name: ct_redis
     restart: always
@@ -62,7 +62,7 @@ services:
       - my_network
 
   ct_redisinsight:
-    image: ghcr.io/sw-luis-palacios/base-redisinsight:main
+    image: ghcr.io/agorastismesaio/docker-img-redisinsight:main
     hostname: redisinsight
     container_name: ct_redisinsight
     restart: always
@@ -100,11 +100,11 @@ If you copy or fork this project to create your own base image.
 To build the Docker image, run the following command in the directory containing the Dockerfile:
 
 ```sh
-docker build -t your-image/base-redis:main .
+docker build -t your-image/docker-img-redis:main .
 ```
 
 ### Troubleshoot
 
 ```sh
-docker run --rm --name ct_redis --hostname redis -p 6379:6379 your-image/base-redis:main
+docker run --rm --name ct_redis --hostname redis -p 6379:6379 your-image/docker-img-redis:main
 ```
