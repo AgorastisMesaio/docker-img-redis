@@ -33,6 +33,7 @@ services:
       - 5540:5540 # Management UI
     volumes:
       - redisinsight_data:/data
+      - ./config:/config
     networks:
       - my_network
     depends_on:
