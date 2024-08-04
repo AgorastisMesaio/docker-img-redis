@@ -9,5 +9,5 @@ FROM redis/redis-stack-server:latest
 WORKDIR /
 
 # By default the redis image will start `init.sh` when booted
-COPY ./config/init.sh ./
+COPY ./config/init.sh /
 RUN chmod +x /init.sh
