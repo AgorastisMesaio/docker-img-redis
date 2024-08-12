@@ -12,6 +12,9 @@ networks:
 
 services:
   ct_redis:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: ghcr.io/agorastismesaio/docker-img-redis:main
     hostname: redis
     container_name: ct_redis
